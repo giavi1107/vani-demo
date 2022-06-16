@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="hoithu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -69,44 +69,45 @@
 
                     <!-- Button trigger modal -->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <button type="button" id="send" class="col-4 phieuphai" data-toggle="modal" data-target="#myModal">
-        <i class="bi bi-check" style="font-size: 25px;"></i>
-        <p class="txtsd">Sử dụng</p>
-        <p class="txtdsd">Đã sử dụng</p>
-    </button>
-    <div id="modals">
-        <div id="myModal" class="modal fade" role="dialog" required>
-            <div class="modal-dialog">
-                <!-- konten modal-->
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="col"></div>
-                        <button type="button" class="col btnclose"  data-dismiss="modal" aria-label="Close">
-                            <span class="close" aria-hidden="true">
-                                <i class="bi bi-x-lg" style="font-size: 20px;"></i>
-                            </span>
-                        </button>
-                        <p class="txtga">Set Gà Rán Lotteria</p>
-                        <p class="txtend">Hết hạn ngày 31/07/2022</p>
-                        <div class="barcode"><img
-                                src="https://img.giftpop.vn/barcode.php?barcode=999486520575&mode=3"
-                                width="290" height="200"></div>
-                        <div class="barcodeNum ">999-486-520-575</div>
-                        <hr>
-                        <p class="txtnut"><span class="bold">Nút [Nhân viên xác nhận] </span> sẽ được sử
-                            <br> dụng khi
-                            nhân viên phải xác nhận việc <br> sử dụng coupon tại cửa hàng.
-                        </p>
-                        <button type="button" class="btnnut" data-dismiss="modal">Nhân viên xác
-                            nhận</button>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </div>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                    <button type="button" id="send" class="col-4 phieuphai" data-toggle="modal" data-target="#myModal">
+                        <i class="bi bi-check" style="font-size: 25px;"></i>
+                        <p class="txtsd">Sử dụng</p>
+                        <p class="txtdsd">Đã sử dụng</p>
+                    </button>
+                    <div id="modals">
+                        <div id="myModal" class="modal fade" role="dialog" required>
+                            <div class="modal-dialog">
+                                <!-- konten modal-->
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="col"></div>
+                                        <button type="button" class="col btnclose" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span class="close" aria-hidden="true">
+                                                <i class="bi bi-x-lg" style="font-size: 20px;"></i>
+                                            </span>
+                                        </button>
+                                        <p class="txtga">Set Gà Rán Lotteria</p>
+                                        <p class="txtend">Hết hạn ngày 31/07/2022</p>
+                                        <div class="barcode"><img
+                                                src="https://img.giftpop.vn/barcode.php?barcode=999486520575&mode=3"
+                                                width="290" height="200"></div>
+                                        <div class="barcodeNum ">999-486-520-575</div>
+                                        <hr>
+                                        <p class="txtnut"><span class="bold">Nút [Nhân viên xác nhận] </span> sẽ được sử
+                                            <br> dụng khi
+                                            nhân viên phải xác nhận việc <br> sử dụng coupon tại cửa hàng.
+                                        </p>
+                                        <button type="button" class="btnnut" data-dismiss="modal">Nhân viên xác
+                                            nhận</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -165,8 +166,8 @@
                 <p class="txt2">Vani Xu</p>
             </div>
             <div class="col col1">
-                <img class="icon2" src="img/nha3.jpg" alt="">
-                <p class="txtht">Hộp thư</p>
+                <img class="icon2" src="img/nha3.jpg" alt=""> <br>
+                <button class="txtht" onclick="openFullscreen();">Hộp thư</button>
             </div>
             <div class="col col1">
                 <img class="icon2" src="img/nha4.jpg" alt="">
@@ -176,10 +177,54 @@
     </div>
     <script>
         $('.txtdsd').hide();
-        $('.btnnut').click(function(){
+        $('.btnnut').click(function () {
             $('.phieuphai').toggleClass('change');
             $('.txtsd').hide();
             $('.txtdsd').show();
+        });
+        /* Get the element you want displayed in fullscreen */
+        var elem = document.documentElement;
+
+        /* Function to open fullscreen mode */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem = window.top.document.body; //To break out of frame in IE
+                elem.msRequestFullscreen();
+            }
+        }
+
+        /* Function to close fullscreen mode */
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                window.top.document.msExitFullscreen();
+            }
+        }
+
+        // Events
+        var output = document.getElementById("myP");
+        document.addEventListener("fullscreenchange", function () {
+            output.innerHTML = "fullscreenchange event fired!";
+        });
+        document.addEventListener("mozfullscreenchange", function () {
+            output.innerHTML = "mozfullscreenchange event fired!";
+        });
+        document.addEventListener("webkitfullscreenchange", function () {
+            output.innerHTML = "webkitfullscreenchange event fired!";
+        });
+        document.addEventListener("msfullscreenchange", function () {
+            output.innerHTML = "msfullscreenchange event fired!";
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
